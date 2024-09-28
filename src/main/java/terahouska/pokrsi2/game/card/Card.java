@@ -10,6 +10,20 @@ public class Card {
         this.suit = suit;
     }
 
+    //region Static methods
+    public static Number[] getNoEffectNumbers() {
+        return new Number[] {Number.FOUR, Number.FIVE, Number.SIX, Number.EIGHT, Number.NINE, Number.TEN};
+    }
+
+    public static Number[] getLowEffectNumbers() {
+        return new Number[] {Number.ACE, Number.TWO, Number.SEVEN, Number.JACK};
+    }
+
+    public static Number[] getHighEffectNumbers() {
+        return new Number[] {Number.THREE, Number.QUEEN, Number.KING};
+    }
+    //endregion
+
     //region Getters and Setters
 
     public Number getNumber() {

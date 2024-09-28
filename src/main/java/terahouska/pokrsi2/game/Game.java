@@ -13,7 +13,7 @@ public class Game {
         game.start();
     }
     private final Queue<Card> deque;
-    private final Card table;
+    private Card table;
     private final List<Player> players;
     private final List<Player> winners = new ArrayList<>();
 
@@ -45,10 +45,7 @@ public class Game {
         assert table != null;
         table.setActive(true);
 
-        System.out.println(deque);
-        System.out.println(deque.size());
-        System.out.println(table);
-        players.forEach(p -> System.out.println(p.getCards()));
+        printBoard();
     }
 
     /**
@@ -58,7 +55,11 @@ public class Game {
         boolean end = false;
         while (!end) {
             Player player = players.getFirst(); // current player
-            System.out.println(getCardOptions(player));
+            Card chosenCard = choosePriorityCard(getCardOptions(player));
+            if (chosenCard != null) {
+                playCard(player, chosenCard);
+            } else drawCard(player);
+            printBoard();
             end = true;
         }
     }
@@ -108,6 +109,37 @@ public class Game {
                 options.add(card);
         }
         return options;
+    }
+
+    private Card choosePriorityCard(Set<Card> options) {
+        return options.stream()
+                .filter(card -> Arrays.stream(Card.getNoEffectNumbers()).anyMatch(number -> number.equals(card.getNumber())))
+                .findFirst().orElse(
+                        options.stream()
+                                .filter(card -> Arrays.stream(Card.getLowEffectNumbers()).anyMatch(number -> number.equals(card.getNumber())))
+                                .findFirst().orElse(
+                                        options.stream()
+                                                .filter(card -> Arrays.stream(Card.getHighEffectNumbers()).anyMatch(number -> number.equals(card.getNumber())))
+                                                .findFirst().orElse(null)
+                                )
+                );
+    }
+
+    private void playCard(Player player, Card card) {
+        try {
+            player.getCards().remove(card);
+            deque.add(table);
+            table = card;
+        } catch (Exception ignored) {}
+    }
+    //TODO: play 2, Q, K
+
+    private void printBoard() {
+        System.out.println("Deque: " + deque);
+        System.out.println("Deque size: " + deque.size());
+        System.out.println("Table: " + table);
+        players.forEach(p -> System.out.println("player: " + p.getCards()));
+        System.out.println();
     }
     //endregion
 }

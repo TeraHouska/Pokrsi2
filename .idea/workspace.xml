@@ -5,27 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9312425a-3b8f-461b-a094-44536ba624ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/PokrsiApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/controller/LobbyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/game/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/game/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/game/card/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/game/card/Number.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/game/card/QueenCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/game/card/Suit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/terahouska/pokrsi2/lobby.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/game/card/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/game/card/Card.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
