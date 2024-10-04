@@ -6,6 +6,7 @@ import terahouska.pokrsi2.game.card.QueenCard;
 import terahouska.pokrsi2.game.card.Suit;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Game {
     public static void main(String[] args) {
@@ -53,15 +54,16 @@ public class Game {
      */
     public void start() {
         boolean end = false;
-        while (!end) {
+        while (!end) { // round
             Player player = players.getFirst(); // current player
             Card chosenCard = choosePriorityCard(getCardOptions(player));
             if (chosenCard != null) {
                 playCard(player, chosenCard);
             } else drawCard(player);
             printBoard();
-            end = true;
+            end = winCheck();
         }
+        printWinners();
     }
 
     //region Private methods
@@ -134,12 +136,40 @@ public class Game {
     }
     //TODO: play 2, Q, K
 
+    /**
+     * Loops through players,
+     * removes all players with no cards from players,
+     * adds them to winners,
+     * adds last player to winners if alone
+     * @return true if no players left
+     */
+    private boolean winCheck() {
+        List<Player> winPlayers =
+                players.stream().filter(player -> player.getCards().isEmpty()).toList();
+        winPlayers.forEach(p -> {
+            players.remove(p);
+            winners.add(p);
+        });
+        if (players.size() == 1) {
+            winners.add(players.removeFirst());
+        }
+        return players.isEmpty();
+    }
+
     private void printBoard() {
         System.out.println("Deque: " + deque);
         System.out.println("Deque size: " + deque.size());
         System.out.println("Table: " + table);
         players.forEach(p -> System.out.println("player: " + p.getCards()));
         System.out.println();
+    }
+
+    private void printWinners() {
+        int i = 1;
+        for (Player w : winners) {
+            System.out.println(i + ". " + w.toString());
+            i++;
+        }
     }
     //endregion
 }
