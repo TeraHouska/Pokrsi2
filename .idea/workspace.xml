@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9312425a-3b8f-461b-a094-44536ba624ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/controller/GameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/terahouska/pokrsi2/game.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/PokrsiApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/PokrsiApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/controller/LobbyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/terahouska/pokrsi2/controller/LobbyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/terahouska/pokrsi2/lobby.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/terahouska/pokrsi2/lobby.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
