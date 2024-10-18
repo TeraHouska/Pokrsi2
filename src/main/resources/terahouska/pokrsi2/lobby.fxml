@@ -19,12 +19,12 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
         </padding>
 
-        <Label fx:id="welcomeText" text="POKRŠÍ 2">
+        <Label text="POKRŠÍ 2">
           <font>
               <Font name="System Bold" size="44.0"/>
           </font>
         </Label>
-        <Button onAction="#onHelloButtonClick" text="Hrát">
+        <Button onAction="#onPlayButtonClick" text="Hrát">
           <font>
               <Font size="18.0"/>
           </font>
